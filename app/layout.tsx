@@ -3,7 +3,7 @@ import "./globals.css";
 import { Nunito } from "next/font/google";
 import ClientOnly from "@/components/ClientOnly";
 import { RegisterModal } from "@/components/modals";
-import ToasterProvider from "@/providers/ToasterProvider";
+import ToasterProvider from "@/app/providers/ToasterProvider";
 import { LoginModal } from "@/components/modals/";
 import getCurrentUser from "./actions/getCurrentUser";
 

@@ -2,10 +2,10 @@
 import React from "react";
 import { Search, Logo, UserMenu } from "./index";
 import Container from "../Container";
-import { User } from "@prisma/client";
+import { SafeUser } from "@/app/types";
 
 interface NavbarProps {
-  currentUser?: User | null;
+  currentUser?: SafeUser | null;
 }
 
 const Navbar = ({ currentUser }: NavbarProps) => {
