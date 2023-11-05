@@ -48,19 +48,6 @@ const LoginModal = () => {
         toast.error(callback.error);
       }
     });
-    // axios
-    //   .post("/api/register", data)
-    //   .then(() => {
-    //     loginModal.onClose();
-    //     toast.success("Account created successfully");
-    //   })
-    //   .catch((err) => {
-    //     console.log(err);
-    //     toast.error("Something went wrong");
-    //   })
-    //   .finally(() => {
-    //     setIsLoading(false);
-    //   });
   };
 
   const bodyContent = (
@@ -94,7 +81,7 @@ const LoginModal = () => {
         outline
         label="Continue with Google"
         icon={FcGoogle}
-        onClick={() => {}}
+        onClick={() => signIn("google")}
       />
       <Button
         outline
