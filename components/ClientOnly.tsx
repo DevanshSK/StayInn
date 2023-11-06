@@ -14,6 +14,7 @@ function ClientOnly({ children }: ClientOnlyProps) {
 
   if (!hasMounted) {
     return null;
+    // return <div className="p-2 text-center animate-pulse">Loading...</div>;
   }
   return <>{children}</>;
 }
