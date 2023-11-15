@@ -8,6 +8,7 @@ import Modal from "./Modal";
 import Heading from "../Heading";
 import { categories } from "../navbar/Categories";
 import { CategoryInput, CountrySelect } from "../inputs";
+import Map from "../Map";
 
 enum STEPS {
   CATEGORY = 0,
@@ -104,8 +105,10 @@ const RentModal = () => {
           subtitle="Help guests find you!"
         />
         <CountrySelect
+          value={location}
           onChange={(value) => setCustomValue("location", value)}
         />
+        <Map />
       </div>
     );
   }
