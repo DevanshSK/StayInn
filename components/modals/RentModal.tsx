@@ -7,7 +7,7 @@ import useRentModal from "@/app/hooks/useRentModal";
 import Modal from "./Modal";
 import Heading from "../Heading";
 import { categories } from "../navbar/Categories";
-import { CategoryInput, Counter, CountrySelect } from "../inputs";
+import { CategoryInput, Counter, CountrySelect, ImageUpload } from "../inputs";
 import dynamic from "next/dynamic";
 // import Map from "../Map";
 
@@ -152,6 +152,18 @@ const RentModal = () => {
           value={bathroomCount}
           onChange={(value) => setCustomValue("bathroomCount", value)}
         />
+      </div>
+    );
+  }
+
+  if (step === STEPS.IMAGES) {
+    bodyContent = (
+      <div className="flex flex-col gap-8">
+        <Heading
+          title="Add a photo of your place"
+          subtitle="Show some guests what your place looks like!"
+        />
+        <ImageUpload />
       </div>
     );
   }
