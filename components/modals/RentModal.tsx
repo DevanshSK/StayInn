@@ -49,6 +49,7 @@ const RentModal = () => {
   const guestCount = watch("guestCount");
   const bathroomCount = watch("bathroomCount");
   const roomCount = watch("roomCount");
+  const imageSrc = watch("imageSrc");
 
   const Map = useMemo(
     () =>
@@ -163,7 +164,10 @@ const RentModal = () => {
           title="Add a photo of your place"
           subtitle="Show some guests what your place looks like!"
         />
-        <ImageUpload />
+        <ImageUpload
+          value={imageSrc}
+          onChange={(value) => setCustomValue("imageSrc", value)}
+        />
       </div>
     );
   }
